@@ -5,7 +5,7 @@ A simple modular ETL (Extract → Transform → Normalize → Outliers → Encod
 ---
 
 # 📁 Project Structure
-
+```markdown
 DATA_PROCESSING_PIPELINE/
 ├── config/
 │   └── settings.toml                 # Pipeline configuration settings
@@ -36,6 +36,7 @@ DATA_PROCESSING_PIPELINE/
 ├── Pipeline.ipynb                    # Jupyter notebook for pipeline demo
 ├── pyproject.toml                    # Project metadata & dependencies
 └── README.md                         # Project documentation
+```
 
 ## Data processing pipeline-> Flow Diagram
                   ┌──────────────────────┐
