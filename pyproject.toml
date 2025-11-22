@@ -1,0 +1,18 @@
+[project]
+name = "my_pipeline"
+version = "0.1.0"
+description = "Data processing pipeline with extract, transform, normalize, clean, and load steps."
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "numpy",
+    "click"
+]
+
+[project.scripts]
+datapipeline = "my_pipeline.cli:cli"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+

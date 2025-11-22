@@ -1,0 +1,61 @@
+# ============================================================
+# Data Processing Pipeline Settings (settings.toml)
+# ============================================================
+
+# ------------------------------------------------------------
+# STEP ORDER
+# ------------------------------------------------------------
+# The pipeline will run steps in this specified order.
+# Allowed: extract, transform, outliers, normalize, encode, load
+
+steps = ["extract", "transform", "outliers", "normalize", "encode", "load"]
+
+
+# ------------------------------------------------------------
+# EXTRACT SETTINGS
+# ------------------------------------------------------------
+[extract]
+input_path = "data/raw/input.csv"
+# future options: file_type = "csv" | "json" | "excel"
+
+
+# ------------------------------------------------------------
+# TRANSFORM SETTINGS (missing-value handling)
+# ------------------------------------------------------------
+[transform]
+method = "mean"      # drop | mean | median | mode | fill | constant | ffill | bfill
+fill_value = 0       # only used if method="constant"
+
+
+# ------------------------------------------------------------
+# OUTLIER REMOVAL SETTINGS
+# ------------------------------------------------------------
+[outliers]
+method = "iqr"       # iqr | zscore
+threshold = 1.5  # used for IQR, Z-score
+
+
+# ------------------------------------------------------------
+# NORMALIZATION SETTINGS
+# ------------------------------------------------------------
+[normalize]
+method = "minmax"    # minmax | zscore | robust
+
+
+# ------------------------------------------------------------
+# CATEGORICAL ENCODING SETTINGS
+# ------------------------------------------------------------
+[encode]
+method = "target"          # onehot | label | target
+target_column = "price"    # required for target encoding
+
+
+# ------------------------------------------------------------
+# LOAD SETTINGS
+# ------------------------------------------------------------
+[load]
+output_path = "data/processed/output.csv"
+save_format = "csv"     # future support: csv, parquet
+
+[logging]
+level = "INFO"
