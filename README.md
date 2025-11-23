@@ -100,6 +100,8 @@ pip3 install tomllib
 pip3 install click
 pip3 install pathlib
 pip3 install tqdm
+#Install this project in editable model
+pip3 install -e .
 ```
 Run pipeline.ipynb file to get the processed file or feel free to use terminal to run commands built using cli
 ### Code Snippet
@@ -108,13 +110,15 @@ Run pipeline.ipynb file to get the processed file or feel free to use terminal t
 ### CLI-Commands Use-case
 
 -----------
-| **Use Case**                              | **Command**                                                                             |
-| ----------------------------------------- | ----------------------------------------------------------------------------------------|
-| **Run full pipeline using settings.toml** | `datapipeline run-all --config config/settings.toml`                                    |
-| **Run full pipeline without config**      | `datapipeline run-all data/raw/input.csv data/processedoutput.csv`                      |
-| **Run only selected steps**               | `datapipeline run --config config/settings.toml`                                        |
-| **Override defaults in settings.toml**    | `datapipeline run --config config/settings.toml --missing-method mode`                  |
-| **Override steps in settings.toml**       | `datapipeline run --config config/settings.toml --steps extract --steps trasnform`      |
+| **Use Case**                                            | **Command**                                                                       |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------|
+| **Run full pipeline using settings.toml**               | `datapipeline run-all --config config/settings.toml`                              |
+| **Run full pipeline without config**                    | `datapipeline run-all data/raw/input.csv data/processedoutput.csv`                |
+| **Run only selected steps**                             | `datapipeline run --config config/settings.toml`                                  |
+| **Override missing-method default in settings.toml**    | `datapipeline run --config config/settings.toml --missing-method mode`            |
+| **Override steps in settings.toml**                     | `datapipeline run --config config/settings.toml --steps extract --steps trasnform`|
+| **Override fill-value in settings.toml**                | `datapipeline run --config config/settings.toml --missing-method constant --fill-value` 3          |
+| **Override steps in settings.toml**                     | `datapipeline run --config config/settings.toml --steps extract --steps trasnform'|
 
 -----------
 
