@@ -1,3 +1,19 @@
+# Data processing Pipeline
+During my academic days at my university, I have found preprocessing the data againa nd again extremely tediously while working on projects. Hence, I made this repo to make this task streamlined and easy to execute which can be extremely helpful for the university student working on data-related projects. IT won't require to look-up andw riting the codes again and again for data processing and whole data can be processed with a single command or running the provided python notebook. 
+
+### A comprehensive data processing pipeline that automatically transforms raw data into clean, organized, and usable output using a structured sequence of steps.
+<img width="696" height="305" alt="Image" src="https://github.com/user-attachments/assets/4e269cbd-6bab-4e16-8283-cadb4f74ef0e" />
+
+## 📌 Table of Contents
+* [Description / Features](#description)
+* [Dependencies](#tech-stack)
+* [Project Structure](#project-structure)
+* [Flow Diagram](#flow-diagram)
+* [Installation Guide](#setup)
+* [Contributing](#contributing)
+* [Potential future Enhancements](#future-enhancements)
+
+<a id="description"></a>
 ## 🎯 Description
 A simple modular ETL (Extract → Transform → Normalize → Outliers → Encode → Load) pipeline built with Python.
 Process the data (.csv format) to be used for model development purposes using a single user-command as well as using python notebook (pipeline.ipynb). users just need to define the configurations of various steps included in this data processing pipeline (e.g., null-values handling, outliers removal, normaliztion, etc.) in the settings.toml file present in config folder of this repo/directory. 
@@ -26,6 +42,7 @@ Process the data (.csv format) to be used for model development purposes using a
 7. ***Porfiling***: Process of analyzing a program to measure its performance, such as execution time and memory usage, to identify bottlenecks.
 8. ***Logging***: records events, messages, and the program’s internal state during execution to help with debugging, monitoring, and auditing. 
 
+<a id="tech-stack"></a>
 ## 🛠️ Dependancies
 ![GitHub tag](https://img.shields.io/github/tag/pandao/editor.md.svg)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -45,6 +62,7 @@ Process the data (.csv format) to be used for model development purposes using a
 
 ***Visual Studio Code***: Primary code editor used for development.
 
+<a id="project-structure"></a>
 ## 📁 Project Structure
 ```markdown
 DATA_PROCESSING_PIPELINE/
@@ -79,6 +97,7 @@ DATA_PROCESSING_PIPELINE/
 └── README.md                         # Project documentation
 ```
 
+<a id="flow-diagram"></a>
 ## ⇢ Data processing pipeline-> Flow Diagram
                   ┌──────────────────────┐
                   │      RAW DATA        │
@@ -125,6 +144,7 @@ DATA_PROCESSING_PIPELINE/
                 │  (Final clean dataset)   │
                 └──────────────────────────┘
 
+<a id="setup"></a>
 ## 📜 Installation-Guide
 
 ```bash
@@ -165,6 +185,7 @@ Apart from this, I have also provided CLI support to the project and you can run
 | **Override normalize-method default in settings.toml**  | `datapipeline run --config config/settings.toml --normalize-method robust`        |
 -----------
 
+<a id="contributing"></a>
 ## 🤝 Contributing
 
 Open-source thrives because of contributors like you. Whether it's a bug fix, feature, or suggestion, your contribution is **highly valued**.
@@ -174,7 +195,7 @@ Open-source thrives because of contributors like you. Whether it's a bug fix, fe
 3. Commit your Changes (`git commit -m 'Add some new Feature'`)
 4. Push to the Branch (`git push origin feature/AddFeature`)
 5. Open a Pull Request
-
+---
 ### 📑 Development Guidelines:
 - Follow existing code style and conventions
 - Write clear, concise commit messages
@@ -195,12 +216,14 @@ When reporting bugs, please include:
 ### ⭐ Feature Request
 - Feel free to [open an issue](https://github.com/deep0505sharma/Data-Processing-Pipeline/issues) on GitHub to request new features or enhancements.  
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/deepak-sharma-40a8781b8/) to discuss ideas and suggestions. 
-
+---
+<a id="future-enhancements"></a>
 ## 🔮 Potential Future Enhancements:
 - [ ] Adding new options or methodologies for null imputation
 - [ ] Support for large datasets using pyspark
 - [ ] Adding option to save output in other file formats (e.g., .parquet)
 
+---
 ## ✍🏻 Author
 **Deepak Sharma**
 - GitHub: [@deep0505sharma](https://github.com/deep0505sharma)
