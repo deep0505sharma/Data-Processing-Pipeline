@@ -117,9 +117,9 @@ Run pipeline.ipynb file to get the processed file or feel free to use terminal t
 | **Run only selected steps**                             | `datapipeline run --config config/settings.toml`                                  |
 | **Override missing-method default in settings.toml**    | `datapipeline run --config config/settings.toml --missing-method mode`            |
 | **Override steps in settings.toml**                     | `datapipeline run --config config/settings.toml --steps extract --steps trasnform`|
-| **Override fill-value in settings.toml**                | `datapipeline run --config config/settings.toml --missing-method constant --fill-value` 3          |
-| **Override steps in settings.toml**                     | `datapipeline run --config config/settings.toml --steps extract --steps trasnform'|
-
+| **Override fill-value in settings.toml**                | `datapipeline run --config config/settings.toml --missing-method constant --fill-value 3`|
+| **Override outliers-method in settings.toml**           | `datapipeline run --config config/settings.toml --outlier-method zscore --threshold 2.5`|
+| **Override encode-method default in settings.toml**     | `datapipeline run --config config/settings.toml --encode-method target --target-column price`|
 -----------
 
 ## 🤝 Contributing
